@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Řepka ozimá Sázava | SEMPRA PRAHA a.s.</title>
+  <meta name="description" content="Řepka ozimá Sázava – hybridní odrůda s plastickým výnosem, vysokou olejnatostí a spolehlivou zimovzdorností. Kompletní agrotechnické postupy, výsledky pokusů a servis SEMPRA PRAHA a.s." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <style>
+    :root {
+      --brand-primary:#166534;
+      --brand-primary-hover:#14532d;
+      --brand-tint:#eaf5ee;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --bg:#f8fafc;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;
+      color:var(--text);
+      background:#fff;
+    }
+    a { color:var(--brand-primary); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    img { display:block; max-width:100%; border-radius:24px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.25rem; }
+
+    header.site {
+      position:fixed;
+      top:0; left:0; right:0;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--border);
+      z-index:20;
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:70px; }
+    .brand { display:flex; align-items:center; gap:.65rem; font-weight:800; color:var(--brand-primary); }
+    .brand img { height:46px; width:auto; border-radius:0; }
+    .navlinks { display:flex; gap:1rem; align-items:center; font-weight:600; }
+    .navlinks a { font-size:.95rem; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      background:var(--brand-primary);
+      color:#fff;
+      border:0;
+      border-radius:18px;
+      padding:.7rem 1.2rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .2s ease, transform .2s ease;
+    }
+    .btn:hover { background:var(--brand-primary-hover); transform:translateY(-1px); }
+    .btn-outline { border:1px solid var(--brand-primary); background:transparent; color:var(--brand-primary); }
+    .btn-outline:hover { background:var(--brand-tint); color:var(--brand-primary); }
+
+    main { padding-top:80px; }
+    section { padding:4.5rem 0; scroll-margin-top:90px; }
+    .hero {
+      position:relative;
+      padding-top:6rem;
+      background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.5) 45%,transparent 70%),linear-gradient(135deg,var(--brand-tint),#fff);
+    }
+    .hero-grid { display:grid; gap:2.5rem; align-items:center; }
+    @media(min-width:920px) { .hero-grid { grid-template-columns:1.15fr .85fr; } }
+
+    h1 { font-size:clamp(2.1rem,3vw,3.1rem); margin:0; }
+    h2 { font-size:clamp(1.7rem,2.4vw,2.4rem); margin:0; color:var(--brand-primary); }
+    h3 { margin:0; font-size:1.25rem; color:var(--text); }
+    p.lead { font-size:1.1rem; color:var(--muted); line-height:1.7; }
+
+    .card {
+      background:rgba(255,255,255,.92);
+      border-radius:26px;
+      padding:2rem;
+      border:1px solid rgba(15,23,42,.06);
+      box-shadow:0 20px 60px rgba(15,23,42,.08);
+      backdrop-filter:blur(6px);
+    }
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+      padding:.35rem .85rem;
+      border-radius:999px;
+      background:rgba(22,101,52,.12);
+      color:var(--brand-primary);
+      font-size:.85rem;
+      font-weight:600;
+    }
+    .grid { display:grid; gap:1.5rem; }
+    .cols-2 { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .cols-3 { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+
+    .metric {
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:1.5rem;
+      background:#fff;
+      box-shadow:0 14px 34px rgba(15,23,42,.05);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .metric:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(15,23,42,.08); }
+    .metric p { margin:.75rem 0 0; color:var(--muted); line-height:1.6; font-size:.97rem; }
+
+    .callout {
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:1.75rem;
+      background:linear-gradient(135deg,#f0fdf4,#fff);
+      box-shadow:0 16px 40px rgba(15,23,42,.06);
+    }
+    blockquote {
+      margin:0;
+      border-left:4px solid var(--brand-primary);
+      padding:.5rem 1.25rem;
+      font-style:italic;
+      color:var(--muted);
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:.96rem;
+      overflow:hidden;
+      border-radius:18px;
+    }
+    th, td { padding:.85rem 1rem; text-align:left; }
+    thead th { background:var(--brand-tint); color:var(--brand-primary); }
+    tbody tr:nth-child(even) { background:#f9fafb; }
+    tbody tr:hover { background:rgba(22,101,52,.08); }
+
+    footer {
+      background:#0f172a;
+      color:#e2e8f0;
+      padding:3rem 0 2.5rem;
+      margin-top:3rem;
+    }
+    footer a { color:#bae6fd; }
+    .footer-grid { display:grid; gap:1.25rem; }
+    @media(min-width:780px) { .footer-grid { grid-template-columns:2fr 1fr; align-items:flex-start; } }
+
+    .to-top {
+      position:fixed;
+      right:1.25rem;
+      bottom:1.25rem;
+      display:none;
+      z-index:30;
+      box-shadow:0 12px 30px rgba(15,23,42,.2);
+    }
+    .to-top.show { display:inline-flex; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        <img src="../logo-sempra.png" alt="SEMPRA PRAHA a.s.">
+        <span>SEMPRA PRAHA a.s.</span>
+      </a>
+      <nav class="navlinks" aria-label="Sekce stránky">
+        <a href="#profil">Profil odrůdy</a>
+        <a href="#prednosti">Přednosti</a>
+        <a href="#agrotechnika">Agrotechnika</a>
+        <a href="#vysledky">Výsledky</a>
+        <a href="#podpora">Servis</a>
+        <a class="btn" href="mailto:info@sempra.cz?subject=Řepka%20Sázava">Kontaktujte nás</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="card">
+          <span class="pill">Řepka ozimá · hybrid Sázava</span>
+          <h1 style="margin-top:1rem">Výnosová stabilita a jistota přezimování pro profesionální pěstitele</h1>
+          <p class="lead" style="margin-top:1rem">Sázava je plastická středně raná hybridní odrůda s vysokou olejnatostí a pevnou stébelnou hmotou. Přesvědčí výbornou zimovzdorností, minimálním poléháním a excelentním zdravotním stavem v širokém spektru stanovišť střední Evropy.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.75rem;">
+            <a class="btn" href="#prednosti">Objevte přednosti</a>
+            <a class="btn btn-outline" href="#vysledky">Podívejte se na výsledky</a>
+          </div>
+        </div>
+        <div>
+          <img src="../repka2.jpg" alt="Porost řepky ozimé Sázava při plném květu">
+        </div>
+      </div>
+    </section>
+
+    <section id="profil">
+      <div class="container" style="display:grid; gap:2rem;">
+        <div class="callout">
+          <h2>Profil odrůdy</h2>
+          <p class="lead" style="margin-top:.85rem">Hybrid Sázava je určen pro farmáře hledající kombinaci vysokého výnosu semene i oleje s jistotou přezimování. Je doporučena zejména do výrobních oblastí Řepařská, Kukuřičná a přilehlé okrajové horské polohy.</p>
+          <div class="grid cols-3" style="margin-top:1.75rem;">
+            <div>
+              <h3 style="color:var(--brand-primary);">Registrace</h3>
+              <p style="color:var(--muted); margin-top:.5rem;">ÚKZÚZ 2020 · SR 2021 · vhodná pro CZ/SK trh</p>
+            </div>
+            <div>
+              <h3 style="color:var(--brand-primary);">Typ</h3>
+              <p style="color:var(--muted); margin-top:.5rem;">Středně raný plastický hybrid · výška středně vysoká</p>
+            </div>
+            <div>
+              <h3 style="color:var(--brand-primary);">Doporučený výsevek</h3>
+              <p style="color:var(--muted); margin-top:.5rem;">45–55 semen/m<sup>2</sup> dle termínu a půdy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prednosti" style="background:linear-gradient(#fff,var(--bg));">
+      <div class="container" style="display:grid; gap:2rem;">
+        <div>
+          <h2>Přednosti odrůdy Sázava</h2>
+          <p class="lead" style="margin-top:.85rem; max-width:760px;">Díky robustnímu habitu a silnému kořenovému systému zvládá Sázava proměnlivé podmínky roku. Pěstitelé oceňují zejména kombinaci výnosu, olejnatosti a zdravotní jistoty.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="metric">
+            <h3>Plastický výnos</h3>
+            <p>Stabilní výnosy 103–106&nbsp;% na průměr kontrolních odrůd v registračních pokusech ÚKZÚZ v letech 2020–2023.</p>
+          </article>
+          <article class="metric">
+            <h3>Zdravotní stav</h3>
+            <p>Výborná tolerance k fomě, verticiliu i cylindrosporióze. Nízká citlivost ke sklerotiniím díky středně hustému šešulovému aparátu.</p>
+          </article>
+          <article class="metric">
+            <h3>Robustní habitus</h3>
+            <p>Pevná stébla a hluboký kořen minimalizují poléhání, usnadňují sklizeň a přispívají k spolehlivému přezimování.</p>
+          </article>
+          <article class="metric">
+            <h3>Vysoká olejnatost</h3>
+            <p>Obsah oleje 46–47&nbsp;% přináší vyšší bonifikaci a ekonomicky zhodnocuje intenzivní výživu dusíkem a sírou.</p>
+          </article>
+          <article class="metric">
+            <h3>Flexibilní technologie</h3>
+            <p>Uplatní se v intenzivních i extenzivních systémech hospodaření. Dobře reaguje na regulaci růstu a hnojení mikroprvky.</p>
+          </article>
+          <article class="metric">
+            <h3>Bezpečné vyzimování</h3>
+            <p>Zimovzdornost 8,2/9 a pevná stébelná hmota zajišťují jistotu nástupu do jara i v rizikových oblastech.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agrotechnika">
+      <div class="container" style="display:grid; gap:2rem;">
+        <div>
+          <h2>Doporučená agrotechnika</h2>
+          <p class="lead" style="margin-top:.85rem; max-width:760px;">Zohledněte specifika stanoviště a sílu porostu. Správná regulace, výživa i ochrana porostu jsou klíčové pro využití potenciálu hybridu Sázava.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="metric">
+            <h3>Termín setí</h3>
+            <p>Ideálně od 20.&nbsp;srpna do 5.&nbsp;září. Na lehkých půdách volte dřívější termín, v těžších polohách lze posunout do 8.&nbsp;září.</p>
+          </article>
+          <article class="metric">
+            <h3>Výživa</h3>
+            <p>Jesenní dávka 30–40&nbsp;kg&nbsp;N/ha doplněná o síru. Na jaře rozdělte 150–170&nbsp;kg&nbsp;N/ha do 3 aplikací a přidejte bor, molybden a mangan.</p>
+          </article>
+          <article class="metric">
+            <h3>Regulace růstu</h3>
+            <p>V hustších porostech aplikujte regulátor ve fázi 4–6 listů a zopakujte na jaře do prodlužovacího růstu. Přispěje k pevnějším stéblům a větvení.</p>
+          </article>
+          <article class="metric">
+            <h3>Ochrana proti chorobám</h3>
+            <p>Na podzim fungicid proti fomě, na jaře zásah proti hlízence a alternáriím dle tlaku chorob. Sledujte lokální signalizace.</p>
+          </article>
+          <article class="metric">
+            <h3>Škůdci</h3>
+            <p>Standardní integrovaná ochrana proti krytonoscům, šešulovým škůdcům a blýskáčkům. Při jarním náletu monitorujte porosty 2× týdně.</p>
+          </article>
+          <article class="metric">
+            <h3>Sklizeň</h3>
+            <p>Středně raná odrůda s vyrovnaným dozráváním. Doporučujeme přímou sklizeň při vlhkosti 8–9&nbsp;%. Šešule odolávají praskání.</p>
+          </article>
+        </div>
+        <div class="callout">
+          <h3 style="color:var(--brand-primary);">Tip agronoma</h3>
+          <p style="margin-top:.75rem; color:var(--muted); line-height:1.7;">V pozdějších výsevech využijte moření s růstovým stimulátorem a dbejte na vyrovnanou hustotu porostu. Sázava vytváří silný hlavní stonek, proto ponechte dostatečný spon pro tvorbu bočních větví.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vysledky" style="background:linear-gradient(var(--bg),#fff);">
+      <div class="container" style="display:grid; gap:2rem;">
+        <div>
+          <h2>Výsledky pokusů 2020–2023</h2>
+          <p class="lead" style="margin-top:.85rem; max-width:760px;">Data vycházejí z registračních zkoušek ÚKZÚZ, poloprovozních testů SEMPRA a spolupráce s referenčními podniky v ČR a SR.</p>
+        </div>
+        <div class="card" style="overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Parametr</th>
+                <th>Sázava</th>
+                <th>Kontrolní průměr</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Výnos semene (dt/ha)</td>
+                <td><strong>43,6</strong></td>
+                <td>41,2</td>
+              </tr>
+              <tr>
+                <td>Výnos oleje (% na kontrolu)</td>
+                <td><strong>105&nbsp;%</strong></td>
+                <td>100&nbsp;%</td>
+              </tr>
+              <tr>
+                <td>Obsah oleje</td>
+                <td>46,8&nbsp;%</td>
+                <td>45,5&nbsp;%</td>
+              </tr>
+              <tr>
+                <td>Zimovzdornost</td>
+                <td>8,2 / 9</td>
+                <td>7,5 / 9</td>
+              </tr>
+              <tr>
+                <td>Odolnost proti poléhání</td>
+                <td>8,4 / 9</td>
+                <td>7,2 / 9</td>
+              </tr>
+              <tr>
+                <td>Ranost dozrávání</td>
+                <td>Středně raná</td>
+                <td>Střední</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>„Sázava si drží vysoký výnos i v letech se stresem z přísušků. Přechod do zimy je rychlý a jarní start jistý, což nám dává prostor plánovat sklizeň bez ztrát." – Agro Slapy s.r.o.</blockquote>
+      </div>
+    </section>
+
+    <section id="podpora">
+      <div class="container" style="display:grid; gap:2.5rem;">
+        <div>
+          <h2>Servis a podpora pěstitelů</h2>
+          <p class="lead" style="margin-top:.85rem; max-width:760px;">Náš tým agronomů a obchodníků vám pomůže od výběru osiva až po sklizeň. Nabízíme kompletní servis včetně technologických listů a poradenství na poli.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="metric">
+            <h3>Certifikované osivo</h3>
+            <p>Dodávka osiva v kvalitě C1 s profesionálním mořením a garantovanou klíčivostí. Logistika přímo z podniků SEMPRA.</p>
+          </article>
+          <article class="metric">
+            <h3>Technologická doporučení</h3>
+            <p>Aktuální materiály k výživě, ochraně a regulaci růstu. Přístupné online nebo po konzultaci s naším poradcem.</p>
+          </article>
+          <article class="metric">
+            <h3>Regionální agronomové</h3>
+            <p>Osobní návštěvy porostů, pomoc se sledováním škůdců a chorob, návrh řešení na míru vašim podmínkám.</p>
+          </article>
+        </div>
+        <div class="card" style="display:grid; gap:1.25rem;">
+          <div>
+            <h3 style="color:var(--brand-primary); font-size:1.35rem;">Kontaktní osoba</h3>
+            <p style="margin-top:.75rem; line-height:1.7; color:var(--muted);">
+              Ing. Petra Novotná<br>
+              Produktová manažerka pro řepku<br>
+              <a href="mailto:petra.novotna@sempra.cz">petra.novotna@sempra.cz</a><br>
+              Tel.: <a href="tel:+420602123456">+420&nbsp;602&nbsp;123&nbsp;456</a>
+            </p>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+            <a class="btn" href="mailto:info@sempra.cz?subject=Poptávka%20osiva%20Sázava">Poptat osivo</a>
+            <a class="btn btn-outline" href="../index.html">Zpět na hlavní web</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>SEMPRA PRAHA a.s.</strong><br>
+        Černokostelecká 270/143, 108 00 Praha 10<br>
+        IČ: 48172928 · DIČ: CZ48172928
+      </div>
+      <div style="color:#94a3b8; font-size:.9rem;">
+        © <span id="year"></span> SEMPRA PRAHA a.s. Všechna práva vyhrazena.<br>
+        <a href="mailto:info@sempra.cz">info@sempra.cz</a> · <a href="tel:+420281012111">+420&nbsp;281&nbsp;012&nbsp;111</a>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="btn to-top" aria-label="Zpět nahoru" id="toTop">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M5 15l7-7 7 7"/><path d="M12 8v13"/></svg>
+  </button>
+
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if (!toTop) return;
+      if (window.scrollY > 320) {
+        toTop.classList.add('show');
+      } else {
+        toTop.classList.remove('show');
+      }
+    });
+    if (toTop) {
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>
