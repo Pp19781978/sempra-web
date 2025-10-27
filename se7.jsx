@@ -59,7 +59,7 @@ const varieties = [
   {
     name: "Lužnice (řepka jarní)",
     description: "Prověřená jarní odrůda s vyrovnaným výnosem a vitalitou.",
-    link: "https://www.sempra.cz/jarni_repka/index.html",
+    link: "jarni_repka/index.html",
   },
 ];
 

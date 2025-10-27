@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Řepka jarní Lužnice – nabídka osiva | SEMPRA PRAHA a.s.</title>
+  <meta name="description" content="Odrůda jarní řepky Lužnice od SEMPRA PRAHA a.s. – raná linie s vysokým obsahem oleje, výborným počátečním růstem a spolehlivými výnosy. Přehled parametrů, doporučení pro pěstování a možnost poptávky osiva." />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" href="/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{--brand-primary:#166534;--brand-primary-hover:#14532d;--brand-tint:#eaf5ee;--brand-accent:#f7c948;--text:#0f172a;--muted:#475569;--border:#e2e8f0;--surface:#ffffff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;color:var(--text);background:var(--surface)}
+    a{color:var(--brand-primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{display:block;max-width:100%;border-radius:20px}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+    header.site{position:sticky;top:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:800;color:var(--brand-primary)}
+    .brand img{height:40px;width:auto}
+    .navlinks{display:none;gap:1rem;align-items:center;font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand-primary);color:#fff;border:0;border-radius:999px;padding:.75rem 1.25rem;font-weight:600;cursor:pointer;transition:background .2s ease}
+    .btn:hover{background:var(--brand-primary-hover)}
+    .btn-outline{border:1px solid var(--brand-primary);color:var(--brand-primary);background:#fff}
+    .btn-outline:hover{background:var(--brand-tint)}
+    section{scroll-margin-top:96px}
+    .hero{position:relative;padding-top:96px;background:linear-gradient(135deg,var(--brand-tint),#fff)}
+    .hero-wrap{display:grid;gap:2rem;align-items:center;min-height:55vh;padding:4rem 0 3rem}
+    .hero h1{font-size:clamp(2rem,3vw,3.25rem);margin:0}
+    .hero .lead{font-size:1.1rem;color:var(--muted);margin:1rem 0 1.5rem}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(22,101,52,.12);color:var(--brand-primary);padding:.5rem 1rem;border-radius:999px;font-weight:600;font-size:.9rem}
+    .card{background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-radius:24px;padding:1.75rem;box-shadow:0 18px 40px rgba(15,23,42,.08)}
+    h2{font-size:clamp(1.7rem,2.4vw,2.3rem);margin:0;color:var(--brand-primary)}
+    h3{margin-top:0;color:var(--brand-primary)}
+    p{line-height:1.6}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:1.5rem}
+    @media(min-width:768px){
+      .navlinks{display:flex}
+      .hero-wrap{grid-template-columns:1.1fr .9fr}
+      .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+    .feature-card{border:1px solid var(--border);border-radius:24px;padding:1.5rem;background:#fff;display:grid;gap:.75rem;box-shadow:0 12px 24px rgba(15,23,42,.04)}
+    .feature-card strong{font-size:1.05rem;color:var(--brand-primary)}
+    .stat{display:flex;flex-direction:column;gap:.35rem;border-radius:20px;background:rgba(247,201,72,.15);padding:1.25rem;font-weight:600;color:#b45309}
+    .stat span{font-size:2rem;color:#92400e}
+    table{width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden}
+    th,td{text-align:left;padding:.75rem}
+    thead{background:var(--brand-primary);color:#fff}
+    tbody tr:nth-child(even){background:rgba(226,232,240,.5)}
+    .tips{border:1px solid var(--border);border-radius:24px;padding:1.5rem;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.05)}
+    .tips ul{margin:0;padding-left:1.1rem;display:grid;gap:.5rem}
+    .steps{counter-reset:item;display:grid;gap:1.25rem}
+    .steps li{list-style:none;border-left:3px solid var(--brand-primary);padding-left:1rem;position:relative}
+    .steps li:before{counter-increment:item;content:counter(item);position:absolute;left:-1.9rem;top:0;width:2.5rem;height:2.5rem;border-radius:999px;background:var(--brand-primary);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+    footer{border-top:1px solid var(--border);background:#fff;margin-top:4rem}
+    footer .footer-grid{display:grid;gap:1.5rem;padding:2.5rem 1rem}
+    footer ul{list-style:none;margin:.75rem 0 0;padding:0;display:grid;gap:.5rem}
+    footer .row{display:flex;align-items:center;gap:.5rem;color:var(--muted)}
+    .to-top{position:fixed;right:1rem;bottom:1rem;display:none;box-shadow:0 12px 20px rgba(15,23,42,.16)}
+    .to-top.show{display:inline-flex}
+    .cookie{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px}
+    .cookie .inner{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--border);box-shadow:0 12px 32px rgba(15,23,42,.12);border-radius:16px;padding:12px 14px;display:flex;gap:.75rem;align-items:flex-start}
+    .cookie .inner .grow{flex:1}
+    .icon{width:18px;height:18px;display:inline-block;vertical-align:-3px}
+    .icon svg{width:18px;height:18px}
+    .row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="SEMPRA PRAHA a.s.">
+        <img src="../logo-sempra.png" alt="SEMPRA – Made in Czech Republic">
+        <span>SEMPRA PRAHA a.s.</span>
+      </a>
+      <nav class="navlinks" aria-label="Sekce stránky">
+        <a href="#predstaveni">O odrůdě</a>
+        <a href="#prednosti">Přednosti</a>
+        <a href="#parametry">Parametry</a>
+        <a href="#agro">Agronomie</a>
+        <a href="#objednavka">Objednávka</a>
+        <a class="btn btn-outline" href="mailto:info@sempra.cz?subject=Poptávka%20Lužnice">Poptat osivo</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="predstaveni">
+    <div class="container hero-wrap">
+      <div class="card">
+        <div class="badge"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 11 4 4L19 7"/></svg></span>Registrovaná linie českého šlechtění</div>
+        <h1>Řepka jarní Lužnice – stabilní volba pro rané setí</h1>
+        <p class="lead">Odrůda Lužnice navazuje na dlouhou tradici šlechtění jarní řepky ve Slapech u Tábora. Přináší spolehlivý výnos na zrno i olej, rychlý jarní start a vysokou odolnost proti poléhání.</p>
+        <div class="row" style="gap:.75rem">
+          <a class="btn" href="#objednavka">Chci nezávaznou nabídku</a>
+          <a class="btn btn-outline" href="#prednosti">Zjistit přednosti</a>
+        </div>
+      </div>
+      <figure style="position:relative">
+        <img src="../repka1.jpg" alt="Porost jarní řepky Lužnice v květu">
+        <figcaption class="muted" style="margin-top:.5rem">Produkční porost Lužnice v plném květu v oblasti Táborska.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="prednosti" style="padding:4rem 0 3rem">
+    <div class="container" style="display:grid;gap:2.5rem">
+      <div class="grid cols-3">
+        <div class="feature-card">
+          <strong>Rychlý jarní start</strong>
+          <p class="muted">Silný počáteční růst umožňuje dobré zapojení porostu a omezuje zaplevelení. Rostliny rychle přecházejí do fáze větvení.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Vysoký obsah oleje</strong>
+          <p class="muted">Stabilně dosahuje nadprůměrného obsahu oleje, což zvyšuje rentabilitu výroby při prodeji na olejný průmysl.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Odolnost vůči poléhání</strong>
+          <p class="muted">Pevná stébla a nízké sklony k poléhání pomáhají udržet porost v optimální sklizňové výšce i při vyšším hnojení dusíkem.</p>
+        </div>
+      </div>
+      <div class="grid cols-2" style="align-items:start">
+        <div class="feature-card">
+          <strong>Vyrovnaný výnos</strong>
+          <p class="muted">V registračních i provozních zkouškách prokázala Lužnice stabilní výnosy zrna i oleje napříč výrobními oblastmi ČR.</p>
+          <div class="stat" aria-label="Průměrný obsah oleje">
+            <span>46,2&nbsp;%</span>
+            průměrný obsah oleje ve zkušebních letech
+          </div>
+        </div>
+        <div class="feature-card">
+          <strong>Spolehlivá ve středních i okrajových polohách</strong>
+          <p class="muted">Doporučená pro rané i standardní termíny setí. Díky střední výšce porostu se snadno sklízí a minimalizuje ztráty.</p>
+          <img src="../repka2.jpg" alt="Detail květenství jarní řepky Lužnice">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parametry" style="background:var(--brand-tint);padding:4rem 0">
+    <div class="container" style="display:grid;gap:2rem">
+      <div>
+        <h2>Klíčové parametry odrůdy</h2>
+        <p class="muted">Souhrn výsledků z registračních zkoušek ÚKZÚZ a interních provozních pokusů SEMPRA PRAHA a.s.</p>
+      </div>
+      <table aria-label="Parametry odrůdy Lužnice">
+        <thead>
+          <tr><th>Vlastnost</th><th>Popis</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Skupina ranosti</td><td>raná až středně raná linie</td></tr>
+          <tr><td>Typ</td><td>tradiční linie (0) s nízkým obsahem kyseliny erukové a glukosinolátů</td></tr>
+          <tr><td>Výška porostu</td><td>středně vysoká (95–110&nbsp;cm)</td></tr>
+          <tr><td>Odolnost vůči poléhání</td><td>nadprůměrná, doporučeno intenzivní hnojení bez regulace růstu</td></tr>
+          <tr><td>Odolnost k chorobám</td><td>dobrá tolerance k fomě, alternárii a bílému hnilobníku</td></tr>
+          <tr><td>Obsah oleje</td><td>45–47&nbsp;% dle lokality</td></tr>
+          <tr><td>HTS</td><td>4,5–5,2&nbsp;g</td></tr>
+          <tr><td>Registrována</td><td>Česká republika 2000, doporučení pro výrobu oleje i krmiv</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="agro" style="padding:4rem 0 3.5rem">
+    <div class="container" style="display:grid;gap:2.5rem">
+      <div class="grid cols-2" style="align-items:center">
+        <div>
+          <h2>Agronomická doporučení</h2>
+          <p class="muted">Pro maximální výnos je vhodné zaměřit se na kvalitní předseťovou přípravu, precizní výživu a včasnou ochranu proti škůdcům jarní řepky.</p>
+          <ul class="steps">
+            <li><strong>Setí a hustota</strong><br>Optimální termín je od konce března do poloviny dubna. Doporučený výsevek 7–8&nbsp;kg/ha (80–90&nbsp;rostlin/m<sup>2</sup>).</li>
+            <li><strong>Výživa</strong><br>Přednost má dělená dávka dusíku 120–150&nbsp;kg/ha. Podzimní fosfor a draslík doplňte podle zásobenosti půdy.</li>
+            <li><strong>Ochrana</strong><br>Monitorujte krytonosce a blýskáčky. Fungicidní ošetření proti fomě a bílé hnilobě provádějte podle signalizace.</li>
+          </ul>
+        </div>
+        <div class="tips">
+          <h3>Tipy z provozu</h3>
+          <ul>
+            <li>Lužnice dobře reaguje na setí do pevných, rovnoměrně zavlažených seťových lůžek.</li>
+            <li>Pro podporu větvení doporučujeme přihnojení sírou na začátku prodlužovacího růstu.</li>
+            <li>Při pozdních mrazech udržuje vitalitu díky pružným lodyhám a listům.</li>
+            <li>Porosty se díky vyššímu obsahu oleje výborně uplatní pro lisování i biodiesel.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="display:grid;gap:1.25rem">
+        <h2 style="margin:0">Výsledky poloprovozních pokusů</h2>
+        <p class="muted">Průměry ze tří lokalit (Slapy, Mažice, Haná) v letech 2021–2023. Kontrolní odrůda = 100&nbsp;%.</p>
+        <div class="grid cols-3">
+          <div class="stat" style="background:rgba(22,101,52,.12);color:var(--brand-primary)">
+            <span style="color:var(--brand-primary)">104&nbsp;%</span>
+            výnos semene vůči kontrole
+          </div>
+          <div class="stat" style="background:rgba(22,101,52,.12);color:var(--brand-primary)">
+            <span style="color:var(--brand-primary)">107&nbsp;%</span>
+            výnos oleje vůči kontrole
+          </div>
+          <div class="stat" style="background:rgba(22,101,52,.12);color:var(--brand-primary)">
+            <span style="color:var(--brand-primary)">91&nbsp;cm</span>
+            průměrná výška porostu
+          </div>
+        </div>
+        <p style="margin:0" class="muted">Vyšší výnos oleje potvrzuje ekonomický přínos pro lisovny i pěstitelské podniky.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="objednavka" style="background:linear-gradient(135deg,#fff,var(--brand-tint));padding:4rem 0 4rem">
+    <div class="container" style="display:grid;gap:2rem">
+      <div class="card" style="display:grid;gap:1.5rem">
+        <h2>Objednávka a servis pro pěstitele</h2>
+        <p class="muted">Nabízíme certifikované osivo v balení po 25&nbsp;kg. Součástí dodávky je i poradenský servis a možnost prohlídky demonstračních polí ve Slapech u Tábora.</p>
+        <div class="grid cols-2">
+          <div class="feature-card" style="box-shadow:none">
+            <strong>Co získáte</strong>
+            <ul style="margin:0;padding-left:1.1rem;display:grid;gap:.5rem">
+              <li>osivo kategorie C1 i C2</li>
+              <li>možnost moření dle přání zákazníka</li>
+              <li>aktuální pěstitelský manuál</li>
+              <li>poradenství agronoma stanice Slapy</li>
+            </ul>
+          </div>
+          <div class="feature-card" style="box-shadow:none">
+            <strong>Kontakty</strong>
+            <p class="muted" style="margin:0">Ing. Jana Hlaváčková<br>Šlechtitelská stanice Slapy u Tábora<br>Tel.: +420&nbsp;381&nbsp;201&nbsp;214<br>E-mail: <a href="mailto:hlavackova@sempra.cz">hlavackova@sempra.cz</a></p>
+          </div>
+        </div>
+        <div class="row" style="justify-content:flex-start;gap:1rem">
+          <a class="btn" href="mailto:info@sempra.cz?subject=Poptávka%20osiva%20Lužnice">Poptat osivo</a>
+          <a class="btn btn-outline" href="tel:+420220875897">Zavolejte nám</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="row" style="font-weight:800;color:var(--brand-primary)"><img src="../logo-sempra.png" alt="SEMPRA – Made in Czech Republic" style="height:22px;width:auto"> SEMPRA PRAHA a.s.</div>
+        <p class="muted" style="margin:.5rem 0 0 0">České šlechtění, semenářství a poradenství pro pěstitele olejnin.</p>
+      </div>
+      <div>
+        <h4 style="margin:0;color:var(--brand-primary)">Další odkazy</h4>
+        <ul>
+          <li><a href="/">Úvodní stránka</a></li>
+          <li><a href="../slapy/index.html">ŠS Slapy u Tábora</a></li>
+          <li><a href="../repka/index.html">Řepka ozimá – Sázava</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin:0;color:var(--brand-primary)">Dokumenty</h4>
+        <ul>
+          <li><a href="mailto:info@sempra.cz?subject=Technick%C3%BD%20list%20Luznice">Technický list Lužnice</a></li>
+          <li><a href="mailto:info@sempra.cz?subject=Cenov%C3%A1%20nab%C3%ADdka%20Luznice">Aktuální ceník</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin:0;color:var(--brand-primary)">Kontakt</h4>
+        <ul>
+          <li class="row"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span> U topíren 2, 170&nbsp;41 Praha 7</li>
+          <li class="row"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.1 3.18 2 2 0 0 1 5 1h3a2 2 0 0 1 2 1.72 12.66 12.66 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 8a16 16 0 0 0 7 7l.36-.26a2 2 0 0 1 2.11-.45 12.66 12.66 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span> +420&nbsp;220&nbsp;875&nbsp;897</li>
+          <li class="row"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></span> info@sempra.cz</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="padding:1.25rem 1rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;color:#64748b;font-size:.9rem">
+      <div>© <span id="year"></span> SEMPRA PRAHA a.s.</div>
+      <div class="row" style="gap:.75rem">
+        <a href="#predstaveni">O odrůdě</a>
+        <a href="#objednavka">Objednávka</a>
+        <a href="mailto:info@sempra.cz?subject=GDPR">GDPR</a>
+      </div>
+    </div>
+  </footer>
+
+  <a id="toTop" class="btn to-top" href="#predstaveni" aria-label="Zpět nahoru">Nahoru</a>
+
+  <div id="cookie" class="cookie" hidden>
+    <div class="inner" role="dialog" aria-live="polite" aria-label="Nastavení cookies">
+      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10a7 7 0 1 1-8-8 3 3 0 0 0 4 4 3 3 0 0 0 4 4Z"/></svg></div>
+      <div class="grow">Používáme cookies k analýze návštěvnosti a zlepšení našich služeb. <a href="mailto:info@sempra.cz?subject=Cookies%20dotaz">Více informací</a></div>
+      <button id="cookieAccept" class="btn" type="button">Souhlasím</button>
+      <button id="cookieClose" class="btn btn-outline" type="button" aria-label="Zavřít">Zavřít</button>
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+    (function(){
+      console.assert(document.querySelector('header.site'), 'Header should render');
+      console.assert(document.querySelectorAll('nav.navlinks a').length >= 4, 'Navigation should contain links');
+      console.assert(document.querySelector('img[src$="repka1.jpg"]'), 'Hero image should be present');
+      console.assert(document.querySelector('#parametry table'), 'Parameters table should exist');
+      var externalImgAttrs = Array.from(document.images).map(function(i){return i.getAttribute('src')||'';}).filter(function(src){return src.startsWith('http://') || src.startsWith('https://');});
+      console.assert(externalImgAttrs.length === 0, 'All images should be local');
+    })();
+
+    function ready(fn){ if(document.readyState !== 'loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn, { once:true }); } }
+
+    ready(function(){
+      var yearEl = document.getElementById('year');
+      var y = String(new Date().getFullYear());
+      yearEl.textContent = y;
+      var toTop = document.getElementById('toTop');
+      function onScroll(){ toTop.classList.toggle('show', window.scrollY > 400); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var cookie = document.getElementById('cookie');
+      var ok = localStorage.getItem('cookie-consent-luznice') === 'yes';
+      if(!ok) cookie.hidden = false;
+      var accept = document.getElementById('cookieAccept');
+      var closeBtn = document.getElementById('cookieClose');
+      accept.addEventListener('click', function(){ localStorage.setItem('cookie-consent-luznice','yes'); cookie.hidden = true; });
+      closeBtn.addEventListener('click', function(){ cookie.hidden = true; });
+    });
+  </script>
+</body>
+</html>
