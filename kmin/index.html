@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kmín – nabídka osiv | SEMPRA PRAHA a.s.</title>
+  <meta name="description" content="Nabízíme certifikované osivo kmínu kořenného odrůd Prochan a Rekord. Kompletní servis pěstování od výběru osiva po sklizeň." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --brand-primary:#166534;
+      --brand-primary-hover:#14532d;
+      --brand-tint:#eaf5ee;
+      --brand-dark:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --surface:#ffffff;
+      color-scheme:light;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;
+      color:var(--brand-dark);
+      background:var(--surface);
+      line-height:1.6;
+    }
+    a { color:var(--brand-primary); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    img { display:block; max-width:100%; border-radius:16px; }
+    header.site {
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--border);
+      z-index:10;
+    }
+    .container {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 1.25rem;
+    }
+    .nav {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:64px;
+      gap:1.5rem;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      font-weight:700;
+      color:var(--brand-primary);
+    }
+    .brand img { height:40px; width:auto; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      background:var(--brand-primary);
+      color:#fff;
+      border-radius:999px;
+      padding:.65rem 1.25rem;
+      font-weight:600;
+      font-size:.95rem;
+      border:0;
+      cursor:pointer;
+      transition:background .2s ease;
+    }
+    .btn:hover { background:var(--brand-primary-hover); }
+    .btn-outline {
+      background:transparent;
+      color:var(--brand-primary);
+      border:1px solid var(--brand-primary);
+    }
+    .hero {
+      position:relative;
+      padding:108px 0 64px;
+      overflow:hidden;
+      background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(234,245,238,0.92));
+    }
+    .hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("../kmin.jpg") center/cover no-repeat;
+      opacity:.3;
+      mix-blend-mode:multiply;
+    }
+    .hero-inner {
+      position:relative;
+      display:grid;
+      gap:2rem;
+      align-items:center;
+    }
+    .hero h1 {
+      margin:0;
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.2;
+    }
+    .hero p.lead {
+      margin:1rem 0 0;
+      color:var(--muted);
+      font-size:1.05rem;
+      max-width:680px;
+    }
+    section {
+      padding:72px 0;
+    }
+    h2 {
+      font-size:clamp(1.65rem,2.6vw,2.1rem);
+      color:var(--brand-primary);
+      margin:0;
+    }
+    p { margin-top:.75rem; }
+    .grid {
+      display:grid;
+      gap:1.5rem;
+    }
+    @media (min-width: 768px) {
+      .grid.cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .grid.cols-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    }
+    .card {
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:1.75rem;
+      box-shadow:0 1px 6px rgba(15,23,42,.08);
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+      padding:.35rem .75rem;
+      border-radius:999px;
+      background:var(--brand-tint);
+      color:var(--brand-primary);
+      font-weight:600;
+      font-size:.8rem;
+    }
+    ul.clean {
+      margin:0;
+      padding-left:1.2rem;
+      color:var(--muted);
+      display:grid;
+      gap:.4rem;
+    }
+    .fact-grid {
+      display:grid;
+      gap:1rem;
+    }
+    @media (min-width: 640px) {
+      .fact-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    .fact {
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:1.25rem;
+      background:rgba(255,255,255,0.9);
+    }
+    .fact strong { display:block; font-size:1.2rem; color:var(--brand-primary); }
+    .contact {
+      background:linear-gradient(135deg,var(--brand-primary),#0d3a1f);
+      color:#fff;
+      border-radius:24px;
+      padding:2rem;
+      display:grid;
+      gap:1rem;
+    }
+    .contact a { color:#bbf7d0; }
+    footer {
+      border-top:1px solid var(--border);
+      padding:2rem 0;
+      background:#f8fafc;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site" aria-label="Hlavní navigace">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        <img src="../logo-sempra.png" alt="SEMPRA PRAHA a.s.">
+        <span>SEMPRA PRAHA a.s.</span>
+      </a>
+      <a class="btn btn-outline" href="../index.html">Zpět na hlavní web</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="pill" aria-hidden="true">Nabídka osiv kmínu</div>
+          <h1>Kvalitní kmín českého původu pro profesionální zemědělce i farmáře</h1>
+          <p class="lead">Navazujeme na dlouholetou tradici šlechtění a semenářství. Dodáváme certifikované osivo kmínu kořenného, které splňuje nejpřísnější požadavky na zdravotní stav i klíčivost. Našimi stálicemi jsou odrůdy <strong>Prochan</strong> a <strong>Rekord</strong>, které nabízíme s kompletním poradenským servisem.</p>
+          <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+            <a class="btn" href="#odrudy">Prohlédnout odrůdy</a>
+            <a class="btn btn-outline" href="#kontakt">Nezávazně poptat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid cols-2" style="align-items:center;gap:2.5rem;">
+        <div>
+          <h2>Proč sáhnout po kmínu od SEMPRA PRAHA</h2>
+          <p>Dbáme na vysokou genetickou čistotu a zdravotní stav výchozích materiálů. Díky moderním technologiím čištění a třídění zaručujeme stabilní kvalitu osiv a rovnoměrné založení porostů. Zemědělcům nabízíme partnerský přístup – od plánování osevního postupu až po zajištění sklizně a odbytu.</p>
+          <ul class="clean">
+            <li>Certifikovaná osiva s vysokou klíčivostí a deklarovaným obsahem silic.</li>
+            <li>Možnost individualizovaného balení a logistika přímo na váš podnik.</li>
+            <li>Poradenství k agrotechnice, výživě i ochraně rostlin.</li>
+            <li>Tradice českého šlechtění a zkušený tým semenářů.</li>
+          </ul>
+        </div>
+        <div class="card" style="background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(234,245,238,.9));">
+          <strong style="font-size:1.15rem;color:var(--brand-primary);">Servis od osiva po sklizeň</strong>
+          <p>Pomůžeme s přípravou půdy, výsevem, regulací plevelů i sklizní. Zajistíme laboratorní rozbory a doporučíme optimální termíny pro jednotlivé zásahy, aby porosty kmínu dosáhly maximálního výnosu i aromatické hodnoty.</p>
+          <p>V případě zájmu zprostředkujeme i odbyt sklizeného kmínu do potravinářského průmyslu či přímý prodej koření.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="odrudy" style="background:linear-gradient(#fff,var(--brand-tint));">
+      <div class="container" style="display:grid;gap:2rem;">
+        <div>
+          <h2>Odrůdy, které máme skladem</h2>
+          <p>Osvědčené materiály přizpůsobené tuzemským podmínkám. Obě odrůdy jsou dvouleté s možností sklizně ve druhém roce a vynikají stabilitou výnosu i vůní.</p>
+        </div>
+        <div class="grid cols-2">
+          <article class="card">
+            <div class="pill">Odrůda Prochan</div>
+            <h3 style="margin:0;font-size:1.35rem;">Kmín kořenný Prochan</h3>
+            <p>Vyrovnaná odrůda českého původu s vysokou raností. Prochan vytváří kompaktní rostliny a dosahuje nadprůměrného obsahu silic, díky čemuž je vhodný pro náročné potravinářské zpracování.</p>
+            <ul class="clean">
+              <li>Vysoká kvalita semen s typickým kořenitým aroma.</li>
+              <li>Dobrá odolnost proti poléhání a sklizňovým ztrátám.</li>
+              <li>Vhodná pro konvenční i ekologické pěstování.</li>
+              <li>Flexibilní dodávky v balení od 5 do 50 kg.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="pill">Odrůda Rekord</div>
+            <h3 style="margin:0;font-size:1.35rem;">Kmín kořenný Rekord</h3>
+            <p>Odrůda ceněná pro stabilní výnosy i v méně příznivých oblastech. Rekord má robustnější habitus, dobře snáší přezimování a poskytuje jednorozměrné nažky, které se snadno čistí.</p>
+            <ul class="clean">
+              <li>Spolehlivá dvouletá odrůda se stabilním výnosem.</li>
+              <li>Výborná vitalita po přezimování a rychlý start na jaře.</li>
+              <li>Velmi dobrý zdravotní stav a nízký podíl příměsí.</li>
+              <li>Ověřená volba pro velké podniky i menší farmy.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="display:grid;gap:2rem;">
+        <div class="fact-grid">
+          <div class="fact">
+            <strong>Balicí možnosti</strong>
+            <p>Dodáváme ve standardních pytlích 25 kg i v menších sáčcích pro speciální výsevy. Po dohodě zajistíme big-bagy nebo očíslované šarže připravené pro smluvní pěstování.</p>
+          </div>
+          <div class="fact">
+            <strong>Certifikace</strong>
+            <p>Osivo prochází certifikací ÚKZÚZ a laboratorní kontrolou klíčivosti. Každá dodávka má k dispozici protokol o výsledku zkoušek a datum šarže.</p>
+          </div>
+          <div class="fact">
+            <strong>Logistika</strong>
+            <p>Zajistíme dopravu do 3 pracovních dnů od potvrzení objednávky. V případě větších objemů nabízíme rozdělení dodávek dle harmonogramu setí.</p>
+          </div>
+          <div class="fact">
+            <strong>Poradenství</strong>
+            <p>Naši agronomové pomohou s volbou předplodiny, termínem výsevu, hustotou setí i ochranou proti škůdcům. Po sezoně vyhodnotíme výsledky a doporučíme další kroky.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" style="padding-bottom:96px;">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2 style="color:#fff;">Spojte se s námi</h2>
+            <p>Chcete si objednat osivo kmínu Prochan nebo Rekord, případně získat doporučení pro váš podnik? Ozvěte se nám – připravíme cenovou nabídku i vhodný termín dodání.</p>
+          </div>
+          <div style="display:grid;gap:.5rem;font-size:1.05rem;">
+            <div><strong>SEMPRA PRAHA a.s.</strong><br>Divize šlechtění a osiv</div>
+            <div>Telefon: <a href="tel:+420224810651">+420&nbsp;224&nbsp;810&nbsp;651</a></div>
+            <div>E-mail: <a href="mailto:osiva@sempra.cz">osiva@sempra.cz</a></div>
+            <div>Adresa: Drnovská 507/73, 161 00 Praha 6 – Ruzyně</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:.5rem;">
+      <div>© <script>document.write(new Date().getFullYear());</script> SEMPRA PRAHA a.s. Všechna práva vyhrazena.</div>
+      <div><a href="../index.html">Zpět na hlavní stránku</a> · <a href="mailto:info@sempra.cz">info@sempra.cz</a></div>
+    </div>
+  </footer>
+</body>
+</html>
