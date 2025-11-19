@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hortenzie ze stanice Hranice na Moravě | SEMPRA PRAHA a.s.</title>
+  <meta name="description" content="Nabídka zahradnické stanice Hranice na Moravě – kolekce hortenzií z programu Pellens s dostupnými termíny expedice a kontaktem na šlechtitele." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --brand-primary:#14532d;
+      --brand-primary-hover:#166534;
+      --brand-accent:#f97316;
+      --brand-tint:#ecfdf5;
+      --brand-tint-2:#f0f9ff;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:#fff;
+      color:var(--text);
+    }
+    img { max-width:100%; display:block; }
+    a { color:var(--brand-primary); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.25rem; }
+    header.site {
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav {
+      height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:700; color:var(--brand-primary); }
+    nav ul { list-style:none; padding:0; margin:0; display:flex; gap:1rem; flex-wrap:wrap; }
+    nav a { font-weight:600; color:var(--muted); }
+    nav a:hover { color:var(--brand-primary); }
+    .hero {
+      position:relative;
+      background:linear-gradient(120deg,rgba(20,83,45,.85),rgba(22,101,52,.65)), url('../hortenzie.JPG') center/cover;
+      color:#fff;
+    }
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.7));
+    }
+    .hero-inner { position:relative; z-index:1; padding:6rem 0 5rem; }
+    .hero h1 { margin:0; font-size:clamp(2rem,4vw,3.5rem); }
+    .hero p { max-width:640px; color:#f8fafc; font-size:1.1rem; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      border-radius:999px;
+      padding:.85rem 1.4rem;
+      border:0;
+      cursor:pointer;
+      background:var(--brand-accent);
+      color:#fff;
+      font-size:1rem;
+      font-weight:600;
+    }
+    .btn-outline { background:transparent; border:1px solid rgba(255,255,255,.6); }
+    section { padding:4rem 0; scroll-margin-top:90px; }
+    h2 { margin:0; font-size:clamp(1.75rem,3vw,2.4rem); color:var(--brand-primary); }
+    p.lead { font-size:1.1rem; color:var(--muted); margin-top:.5rem; }
+    .grid { display:grid; gap:1.5rem; }
+    @media (min-width:768px) {
+      .grid.cols-2 { grid-template-columns:repeat(2,1fr); }
+      .grid.cols-3 { grid-template-columns:repeat(3,1fr); }
+      .grid.cols-4 { grid-template-columns:repeat(4,1fr); }
+    }
+    .card {
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:1.5rem;
+      background:#fff;
+      box-shadow:0 8px 28px rgba(15,23,42,.08);
+    }
+    .muted { color:var(--muted); }
+    .pill { display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .85rem; border-radius:999px; background:var(--brand-tint); color:var(--brand-primary); font-weight:600; font-size:.9rem; }
+    ul.varieties { list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:.75rem; }
+    ul.varieties li { padding:.85rem 1rem; border:1px solid var(--border); border-radius:16px; background:#f8fafc; font-weight:600; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+    ul.varieties span { font-weight:400; color:var(--muted); }
+    .gallery-card { overflow:hidden; border-radius:24px; border:1px solid var(--border); }
+    .gallery-card img { width:100%; height:260px; object-fit:cover; }
+    .gallery-card figcaption { padding:1rem; background:#fff; }
+    .timeline { display:grid; gap:1rem; margin-top:1.5rem; }
+    .timeline-item { display:flex; gap:1rem; }
+    .timeline-item strong { min-width:140px; color:var(--brand-primary); }
+    .cta { text-align:center; border-radius:32px; padding:2rem; background:linear-gradient(120deg,var(--brand-primary),#1c1917); color:#fff; }
+    footer { background:#0f172a; color:#cbd5f5; padding:2.5rem 0; }
+    footer a { color:#fef3c7; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="../logo-sempra.png" alt="SEMPRA PRAHA a.s." style="height:42px;width:auto" />
+        <span>Hortenzie Hranice</span>
+      </a>
+      <nav aria-label="Sekce stránky">
+        <ul>
+          <li><a href="#pribeh">Příběh</a></li>
+          <li><a href="#kultivary">Kultivary</a></li>
+          <li><a href="#technologie">Pěstování</a></li>
+          <li><a href="#objednavky">Objednávky</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <p class="pill">Šlechtitelská stanice Hranice na Moravě</p>
+      <h1>Kolekce hortenzií pro parkové výsadby i zahrady</h1>
+      <p>Navazujeme na tradici zahradnického výzkumu SEMPRY. Z německého programu Pellens vybíráme elitní kvetoucí kultivary, které v Hranicích pečlivě zakořeňujeme a připravujeme k expedici pro české zahradnictví.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+        <a class="btn" href="#objednavky">Chci poptávku</a>
+        <a class="btn btn-outline" href="#kultivary">Seznam odrůd</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="pribeh">
+      <div class="container grid cols-2" style="align-items:center; gap:2rem;">
+        <div>
+          <h2>O stanici a programu</h2>
+          <p class="lead">V Hranicích na Moravě budujeme zázemí pro množení hortenzií od společnosti Pellens Hortensien. Kombinujeme pečlivý výběr matečných rostlin, moderní mlžení a udržitelnou výživu s využitím místní vody z Moravské brány.</p>
+          <p class="muted">Rostliny nabízíme ve třech velikostech kontejnerů (C2, C3 a C5) s garancí bohatého narašení. Ke každé dodávce přidáváme technologický list a doporučené termíny řezu. Disponujeme vyrovnanými šaržemi pro retail i pro velkoobjemové výsadby obcí.</p>
+          <div class="card" style="margin-top:1.5rem;">
+            <strong>Seznam odrůd hortenzií</strong>
+            <p class="muted">Aktuální kolekce dostupná pro jarní a podzimní expedice 2025.</p>
+            <ul class="varieties">
+              <li>Magical Amethyst <span>kulovitý květ, proměnlivá barva</span></li>
+              <li>Magical Ruby Tuesday <span>sytě červené květenství</span></li>
+              <li>Magical Revolution <span>kompaktní habitus, dlouhé kvetení</span></li>
+              <li>Magical Green Delight <span>stálé zelenání květů</span></li>
+              <li>Hovaria Hobella <span>velká talířová květenství</span></li>
+              <li>Schneeball <span>klasická bílá hortenzie</span></li>
+              <li>Vanille Fraise <span>metlatá forma, růžový přechod</span></li>
+              <li>Wim's Red <span>podzimní vínové tóny</span></li>
+              <li>Little Lime <span>kompaktní paniculata pro nádoby</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="background:var(--brand-tint-2);">
+          <h3 style="margin-top:0;">Naše servisní body</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Výběr materiálu</strong>
+              <p class="muted">Licencované řízky Pellens jsou okamžitě po doručení očíslovány a nasazeny do inertního substrátu s perlitovou drenáží.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Kořenová mlha</strong>
+              <p class="muted">Řídíme zálivku mlhou na bázi reverzní osmotické vody, takže rostliny nepoznají stres a rychle vytvářejí silný kořen.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Expedice</strong>
+              <p class="muted">Dodávky balíme do prodyšných paletových boxů s QR štítky. Při převzetí získáte i digitální fotodokumentaci šarže.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kultivary" style="background:var(--brand-tint);">
+      <div class="container">
+        <h2>Kultivary v nabídce</h2>
+        <p class="lead">Každou sezonu testujeme více než 25 odrůd Pellens Hortensien a do finální nabídky zařazujeme jen ty, které v podmínkách Moravské brány excelují.</p>
+        <div class="grid cols-3" style="margin-top:2rem;">
+          <article class="card">
+            <div class="pill">Hydrangea macrophylla</div>
+            <h3>Magical Amethyst</h3>
+            <p class="muted">Dynamické přechody z limetkové do sytě purpurové barvy. Ideální pro prémiový retail – nabízíme v C3 s pětinásobným květním pupenem.</p>
+          </article>
+          <article class="card">
+            <div class="pill">Hydrangea macrophylla</div>
+            <h3>Magical Ruby Tuesday</h3>
+            <p class="muted">Zářivě červené květy s voskovým povrchem drží barvu i na plném slunci. Doporučená pro veřejnou zeleň a reprezentativní nádoby.</p>
+          </article>
+          <article class="card">
+            <div class="pill">Hydrangea macrophylla</div>
+            <h3>Magical Revolution</h3>
+            <p class="muted">Kompaktní růst, drobná ale hustá květenství. Skvělá na terasy, výborně snáší přepravu a brzké kvetení v květináči.</p>
+          </article>
+          <article class="card">
+            <div class="pill">Hydrangea paniculata</div>
+            <h3>Vanille Fraise</h3>
+            <p class="muted">Panikulární hortenzie s krémovým začátkem a malinovým podzimem. V Hranicích ji nabízíme v C5 pro rychlé zapojení výsadeb.</p>
+          </article>
+          <article class="card">
+            <div class="pill">Hydrangea paniculata</div>
+            <h3>Wim's Red</h3>
+            <p class="muted">Zahuštěná stavba lat, které od července tmavnou do vínova. Výborná volba pro alejové výsadby a zahradní architektky.</p>
+          </article>
+          <article class="card">
+            <div class="pill">Hydrangea paniculata</div>
+            <h3>Little Lime</h3>
+            <p class="muted">Miniaturní kultivar s pevnými stonky. Nabízíme jej pro prodejny hobby marketů i jako doplněk do městských parků v nádobách.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologie">
+      <div class="container grid cols-2" style="align-items:center; gap:2rem;">
+        <div>
+          <h2>Technologie pěstování</h2>
+          <p class="lead">Zázemí v Hranicích tvoří 1 200 m² fóliovníků s inteligentním zastíněním a odděleným prostorem pro paniculaty a macrophylla typ.</p>
+          <ul style="margin-top:1.25rem; padding-left:1.25rem; color:var(--muted); line-height:1.6;">
+            <li>Uzavřený mlžný okruh s UV dezinfekcí vody a fertirigací na základě senzorů EC/pH.</li>
+            <li>Bio ochrana – introdukujeme Encarsia a Orius pro potlačení mšic bez chemie.</li>
+            <li>Vlastní laboratorní testy pH substrátu každé dva týdny.</li>
+            <li>Logistika v reuse přepravkách, možnost osobního odběru i kurýrní služby.</li>
+          </ul>
+        </div>
+        <div class="grid" style="gap:1rem;">
+          <figure class="gallery-card">
+            <img src="https://www.pellens-hortensien.de/wp-content/uploads/2023/03/pellens-hortensie-magical-amethyst.jpg" alt="Květ hortenzie Magical Amethyst" loading="lazy" />
+            <figcaption>Magical Amethyst – ukázka barvení z programu Pellens.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="https://www.pellens-hortensien.de/wp-content/uploads/2023/03/pellens-hortensie-paniculata-vanille-fraise.jpg" alt="Hortenzie Vanille Fraise" loading="lazy" />
+            <figcaption>Vanille Fraise s malinovým přelivem, foceno v partnerském zahradnictví.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="objednavky" style="background:var(--brand-tint-2);">
+      <div class="container">
+        <div class="grid cols-2" style="align-items:center; gap:2rem;">
+          <div>
+            <h2>Objednávky a dostupnost</h2>
+            <p class="lead">Přijímáme rezervace na jarní expedici (březen–duben) a podzimní výsadby (září–říjen). Vždy držíme minimálně 500 kusů z každé vybrané odrůdy pro velkoobchodní partnery.</p>
+            <div class="card" style="margin-top:1rem;">
+              <h3 style="margin-top:0;">Kapacity 2025</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Březen</strong>
+                  <p class="muted">Kolekce macrophylla v C2 – vhodné pro retail.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>Květen</strong>
+                  <p class="muted">Paniculata C3/C5 připravená k výsadbě, k dispozici katalogové etikety.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>Září</strong>
+                  <p class="muted">Následné šarže s hlubokým kořenovým balem pro veřejnou zeleň.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cta">
+            <h3>Potřebujete konkrétní sortiment?</h3>
+            <p>Napište nám čísla odrůd Pellens a požadovaný termín expedice. Připravíme potvrzení kapacit do 48 hodin.</p>
+            <p style="font-size:1.25rem; font-weight:700; margin:1rem 0;">📧 hranice@sempra.cz • ☎︎ +420 581 650 251</p>
+            <a class="btn" href="mailto:hranice@sempra.cz?subject=Hortenzie%20-%20poptávka">Odeslat poptávku</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt">
+    <div class="container grid cols-3" style="gap:2rem;">
+      <div>
+        <h3 style="margin-top:0; color:#fff;">Stanice Hranice</h3>
+        <p>Valtická 120, 753 01 Hranice na Moravě<br />GPS: 49.547, 17.738</p>
+      </div>
+      <div>
+        <h4 style="margin:0; color:#fff;">Kontakty</h4>
+        <p>Vedoucí: Ing. Petra Ševčíková<br />Tel.: +420 581 650 251<br />E-mail: <a href="mailto:hranice@sempra.cz">hranice@sempra.cz</a></p>
+      </div>
+      <div>
+        <h4 style="margin:0; color:#fff;">Dokumenty</h4>
+        <p><a href="../index.html">Zpět na hlavní web SEMPRY</a><br /><a href="#kultivary">Aktuální katalog hortenzií</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
