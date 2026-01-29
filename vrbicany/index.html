@@ -46,6 +46,16 @@
     @media(min-width:768px){.facts{grid-template-columns:repeat(3,1fr)}}
     .fact{border:1px solid var(--border);border-radius:20px;padding:1.25rem;text-align:center;background:#fff}
     .fact strong{display:block;font-size:1.75rem;color:var(--brand-primary)}
+    .section-block{border:1px solid var(--border);border-radius:20px;padding:1.5rem;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:.75rem 1rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+    thead th{background:var(--brand-tint);color:var(--brand-primary);font-weight:700}
+    tbody tr:nth-child(even){background:#f8fafc}
+    .gallery{display:grid;gap:1rem;margin-top:2rem}
+    @media(min-width:768px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    figure{margin:0}
+    figcaption{margin-top:.5rem;font-size:.85rem;color:var(--muted)}
     .cta{padding:4rem 1rem;background:linear-gradient(135deg,var(--brand-tint),#fff)}
     footer{border-top:1px solid var(--border);background:#fff;margin-top:4rem}
     footer .grid{gap:1rem}
@@ -142,56 +152,185 @@
 
     <section id="rent" style="padding:4rem 0">
       <div class="container">
-        <div class="grid cols-2" style="align-items:center">
-          <div>
-            <h2>Nabídka nebytových prostor k pronájmu</h2>
-            <p class="muted" style="margin-top:.75rem">Nová multifunkční hala s modulární dispozicí je situována jen několik set metrů od sjezdu z dálnice D8. Nabízí kombinaci kanceláří, dílen, laboratorních boxů i temperovaných skladů.</p>
+        <h2>Nabídka haly k pronájmu ve Vrbičanech</h2>
+        <p class="muted" style="margin-top:.75rem">Nová hala nabízí tři samostatné části vhodné pro výrobní, skladové, servisní i technické operace. K dispozici bude od 10/2026 s možností dlouhodobého pronájmu a flexibilního rozsahu.</p>
+
+        <div class="gallery">
+          <figure class="card-border">
+            <img src="vizualizace-interier.svg" alt="Vizualizace interiéru nové haly ve Vrbičanech">
+            <figcaption>Vizualizace interiéru haly s vysokým stropem a průmyslovým osvětlením.</figcaption>
+          </figure>
+          <figure class="card-border">
+            <img src="vizualizace-exterier.svg" alt="Vizualizace exteriéru nové haly ve Vrbičanech">
+            <figcaption>Vizualizace exteriéru haly s velkými vraty a zpevněnou venkovní plochou.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-block" style="margin-top:2rem">
+          <h3 style="margin-top:0">Přehled prostor k pronájmu</h3>
+          <div class="table-wrap" style="margin-top:1rem">
+            <table>
+              <thead>
+                <tr>
+                  <th>Část</th>
+                  <th>Výrobní/skladovací plocha (m²)</th>
+                  <th>Zázemí WC + kancelář (m²)</th>
+                  <th>Venkovní plocha (m²)</th>
+                  <th>Max. výška (m)</th>
+                  <th>Objem (m³)</th>
+                  <th>Možnost oplocení</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>212</td>
+                  <td>18</td>
+                  <td>276</td>
+                  <td>5,5</td>
+                  <td>1 166</td>
+                  <td>Ano</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>187</td>
+                  <td>10</td>
+                  <td>221</td>
+                  <td>5,5</td>
+                  <td>1 029</td>
+                  <td>Ano</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>284</td>
+                  <td>10</td>
+                  <td>164</td>
+                  <td>5,5</td>
+                  <td>1 562</td>
+                  <td>Ano</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="facts" style="margin-top:1.5rem">
+            <div class="fact">
+              <strong>721 m²</strong>
+              <span>celková vnitřní plocha (bez zázemí: 683 m²)</span>
+            </div>
+            <div class="fact">
+              <strong>661 m²</strong>
+              <span>celková venkovní plocha</span>
+            </div>
+            <div class="fact">
+              <strong>5,5 m</strong>
+              <span>světlá výška výrobních/skladových prostor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid cols-2" style="margin-top:2rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Lokalita a logistika</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Flexibilní jednotky od 120 do 1 200 m² – možnost propojit dle potřeb nájemce.
+                Vrbičany u Lovosic – strategické umístění.
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Přímé napojení na dálnici D8 a rychlý přístup do průmyslových zón Lovosice a Litoměřice.
+                Dálnice D8, přivaděč cca 5 km.
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Parkování pro osobní i nákladní vozy, manipulační plochy a dobíjecí stanice pro elektromobily.
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Sdílené zázemí – recepce, zasedací místnost, showroom, zkušební laboratoře.
+                Snadné napojení na Prahu, Ústí nad Labem a Německo.
               </li>
             </ul>
-            <div style="margin-top:1.75rem" class="highlight">
-              <p style="margin:0;font-weight:600">Kontaktujte nás pro nabídku pronájmu a individuální konfiguraci prostor.</p>
-            </div>
-            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-              <a class="btn" href="mailto:info@sempra.cz?subject=Pronajem%20Vrbi%C4%8Dany">Napsat poptávku</a>
-              <a class="btn btn-outline" href="#contact">Domluvit prohlídku</a>
-            </div>
           </div>
-          <div>
-            <div class="card-border" style="min-height:360px;background:linear-gradient(160deg,rgba(22,101,52,.1),rgba(22,101,52,.02));display:flex;flex-direction:column;gap:1.25rem;justify-content:center;padding:2rem">
-              <div>
-                <h3 style="margin:0">Klíčové benefity</h3>
-                <div class="facts" style="margin-top:1.5rem">
-                  <div class="fact">
-                    <strong>+12</strong>
-                    <span>vyhrazených parkovacích míst</span>
-                  </div>
-                  <div class="fact">
-                    <strong>8 m</strong>
-                    <span>světlá výška haly</span>
-                  </div>
-                  <div class="fact">
-                    <strong>24/7</strong>
-                    <span>vstup pomocí moderního přístupu</span>
-                  </div>
-                </div>
-              </div>
-              <p class="muted">Součástí areálu je také servisní dílna, možnost laboratorního provozu, datové připojení optickým kabelem a technická podpora odborníků SEMPRA.</p>
+          <div class="section-block">
+            <h3 style="margin-top:0">Technické a provozní parametry</h3>
+            <ul class="features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Samostatné vstupy do jednotlivých částí pro provozní nezávislost a bezpečnost.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Dvoukřídlá vrata cca 4 × 4,1 m vhodná pro nákladní vozidla.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Zavedené inženýrské sítě, elektřina 230 V / 400 V.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Zázemí vytápěno přímotopy, samostatná plynová přípojka pro každou halu.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Flexibilní využití pro výrobní, skladové, servisní a technické operace.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid cols-2" style="margin-top:1.5rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Parkování a venkovní plochy</h3>
+            <ul class="features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Společné parkoviště pro zaměstnance a obsluhu provozu.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Venkovní plochy u jednotlivých částí s možností samostatného oplocení.
+              </li>
+            </ul>
+          </div>
+          <div class="section-block">
+            <h3 style="margin-top:0">Dostupnost lidských zdrojů</h3>
+            <ul class="features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Možnost spolupráce s odborným učilištěm.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Dostupné profese: mechanici, opraváři, truhláři, autotronici.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid cols-2" style="margin-top:1.5rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Podmínky pronájmu</h3>
+            <ul class="features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Dlouhodobý pronájem preferován.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Možnost pronájmu jednotlivých částí i celého objektu.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                Nájemné: dohoda.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                K dispozici od 10/2026.
+              </li>
+            </ul>
+          </div>
+          <div class="section-block">
+            <h3 style="margin-top:0">Kontakt pro zájemce</h3>
+            <p style="margin:.25rem 0 1rem;font-weight:600">Ing. Jiří Šmíd – jednatel</p>
+            <p class="muted" style="margin:0 0 1rem">Rádi připravíme individuální nabídku pronájmu a domluvíme osobní prohlídku areálu.</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
+              <a class="btn" href="tel:+420606174951">📱 +420 606 174 951</a>
+              <a class="btn btn-outline" href="mailto:info@sempra.cz?subject=Pron%C3%A1jem%20haly%20Vrbi%C4%8Dany">Napsat poptávku</a>
             </div>
           </div>
         </div>
