@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Vizualizace exteriéru nové haly</title>
+  <desc id="desc">Ilustrační vizualizace exteriéru haly s velkými vraty a zpevněnou plochou.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <rect y="520" width="1200" height="280" fill="#e2e8f0"/>
+  <rect x="100" y="240" width="1000" height="360" rx="24" fill="#ffffff" stroke="#cbd5f5" stroke-width="4"/>
+  <rect x="180" y="320" width="200" height="200" fill="#e2e8f0"/>
+  <rect x="420" y="320" width="200" height="200" fill="#e2e8f0"/>
+  <rect x="660" y="320" width="200" height="200" fill="#e2e8f0"/>
+  <rect x="900" y="320" width="140" height="200" fill="#e2e8f0"/>
+  <text x="140" y="210" font-family="system-ui, sans-serif" font-size="28" fill="#0f172a" font-weight="700">Vizualizace exteriéru nové haly</text>
+  <text x="140" y="585" font-family="system-ui, sans-serif" font-size="20" fill="#475569">Široká vrata, příjezdová plocha a možnost oplocení</text>
+</svg>
