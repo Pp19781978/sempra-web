@@ -46,16 +46,16 @@
     @media(min-width:768px){.facts{grid-template-columns:repeat(3,1fr)}}
     .fact{border:1px solid var(--border);border-radius:20px;padding:1.25rem;text-align:center;background:#fff}
     .fact strong{display:block;font-size:1.75rem;color:var(--brand-primary)}
-    .table-wrap{overflow-x:auto;border-radius:20px;border:1px solid var(--border);background:#fff}
-    table{width:100%;border-collapse:collapse;min-width:640px}
-    th,td{padding:.75rem .9rem;text-align:left;border-bottom:1px solid var(--border);font-size:.95rem}
-    th{background:var(--brand-tint);color:var(--brand-primary);font-weight:700}
-    tr:last-child td{border-bottom:none}
-    .table-meta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;color:var(--muted)}
-    .gallery{display:grid;gap:1.5rem}
+    .section-block{border:1px solid var(--border);border-radius:20px;padding:1.5rem;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:.75rem 1rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+    thead th{background:var(--brand-tint);color:var(--brand-primary);font-weight:700}
+    tbody tr:nth-child(even){background:#f8fafc}
+    .gallery{display:grid;gap:1rem;margin-top:2rem}
     @media(min-width:768px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .gallery figure{margin:0;display:grid;gap:.75rem}
-    .gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;border:1px solid var(--border)}
+    figure{margin:0}
+    figcaption{margin-top:.5rem;font-size:.85rem;color:var(--muted)}
     .cta{padding:4rem 1rem;background:linear-gradient(135deg,var(--brand-tint),#fff)}
     footer{border-top:1px solid var(--border);background:#fff;margin-top:4rem}
     footer .grid{gap:1rem}
@@ -152,13 +152,24 @@
 
     <section id="rent" style="padding:4rem 0">
       <div class="container">
-        <h2>Nabídka haly k pronájmu</h2>
-        <p class="muted" style="margin-top:.75rem">Hala ve Vrbičanech u Lovosic nabízí tři samostatné části s možností dlouhodobého pronájmu. Každý segment má vlastní zázemí a venkovní plochy s možností oplocení.</p>
+        <h2>Nabídka haly k pronájmu ve Vrbičanech</h2>
+        <p class="muted" style="margin-top:.75rem">Nová hala nabízí tři samostatné části vhodné pro výrobní, skladové, servisní i technické operace. K dispozici bude od 10/2026 s možností dlouhodobého pronájmu a flexibilního rozsahu.</p>
 
-        <div style="margin-top:2rem" class="card-border">
-          <h3 style="margin-top:0">1️⃣ Přehled prostor k pronájmu</h3>
+        <div class="gallery">
+          <figure class="card-border">
+            <img src="vizualizace-interier.svg" alt="Vizualizace interiéru nové haly ve Vrbičanech">
+            <figcaption>Vizualizace interiéru haly s vysokým stropem a průmyslovým osvětlením.</figcaption>
+          </figure>
+          <figure class="card-border">
+            <img src="vizualizace-exterier.svg" alt="Vizualizace exteriéru nové haly ve Vrbičanech">
+            <figcaption>Vizualizace exteriéru haly s velkými vraty a zpevněnou venkovní plochou.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-block" style="margin-top:2rem">
+          <h3 style="margin-top:0">Přehled prostor k pronájmu</h3>
           <div class="table-wrap" style="margin-top:1rem">
-            <table aria-label="Přehled prostor k pronájmu">
+            <table>
               <thead>
                 <tr>
                   <th>Část</th>
@@ -177,7 +188,7 @@
                   <td>18</td>
                   <td>276</td>
                   <td>5,5</td>
-                  <td>1&nbsp;166</td>
+                  <td>1 166</td>
                   <td>Ano</td>
                 </tr>
                 <tr>
@@ -186,7 +197,7 @@
                   <td>10</td>
                   <td>221</td>
                   <td>5,5</td>
-                  <td>1&nbsp;029</td>
+                  <td>1 029</td>
                   <td>Ano</td>
                 </tr>
                 <tr>
@@ -195,21 +206,31 @@
                   <td>10</td>
                   <td>164</td>
                   <td>5,5</td>
-                  <td>1&nbsp;562</td>
+                  <td>1 562</td>
                   <td>Ano</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="table-meta">
-            <span><strong>Celková vnitřní plocha:</strong> 721 m² (bez zázemí: 683 m²)</span>
-            <span><strong>Celková venkovní plocha:</strong> 661 m²</span>
+          <div class="facts" style="margin-top:1.5rem">
+            <div class="fact">
+              <strong>721 m²</strong>
+              <span>celková vnitřní plocha (bez zázemí: 683 m²)</span>
+            </div>
+            <div class="fact">
+              <strong>661 m²</strong>
+              <span>celková venkovní plocha</span>
+            </div>
+            <div class="fact">
+              <strong>5,5 m</strong>
+              <span>světlá výška výrobních/skladových prostor</span>
+            </div>
           </div>
         </div>
 
-        <div class="grid cols-2" style="margin-top:2.5rem;align-items:start">
-          <div class="card-border">
-            <h3 style="margin-top:0">2️⃣ Lokalita a logistika</h3>
+        <div class="grid cols-2" style="margin-top:2rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Lokalita a logistika</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
@@ -225,20 +246,16 @@
               </li>
             </ul>
           </div>
-          <div class="card-border">
-            <h3 style="margin-top:0">3️⃣ Technické a provozní parametry</h3>
+          <div class="section-block">
+            <h3 style="margin-top:0">Technické a provozní parametry</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Samostatné vstupy do jednotlivých částí pro nezávislý provoz.
+                Samostatné vstupy do jednotlivých částí pro provozní nezávislost a bezpečnost.
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Dvoukřídlá vrata cca 4 × 4,1 m pro nákladní vozidla.
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Světlá výška výrobních/skladových prostor až 5,5 m.
+                Dvoukřídlá vrata cca 4 × 4,1 m vhodná pro nákladní vozidla.
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
@@ -250,15 +267,15 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-                Flexibilní využití pro výrobní, skladové i servisní operace.
+                Flexibilní využití pro výrobní, skladové, servisní a technické operace.
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="grid cols-2" style="margin-top:2.5rem;align-items:start">
-          <div class="card-border">
-            <h3 style="margin-top:0">4️⃣ Parkování a venkovní plochy</h3>
+        <div class="grid cols-2" style="margin-top:1.5rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Parkování a venkovní plochy</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
@@ -270,8 +287,8 @@
               </li>
             </ul>
           </div>
-          <div class="card-border">
-            <h3 style="margin-top:0">5️⃣ Dostupnost lidských zdrojů</h3>
+          <div class="section-block">
+            <h3 style="margin-top:0">Dostupnost lidských zdrojů</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
@@ -285,9 +302,9 @@
           </div>
         </div>
 
-        <div class="grid cols-2" style="margin-top:2.5rem;align-items:start">
-          <div class="card-border">
-            <h3 style="margin-top:0">6️⃣ Podmínky pronájmu</h3>
+        <div class="grid cols-2" style="margin-top:1.5rem">
+          <div class="section-block">
+            <h3 style="margin-top:0">Podmínky pronájmu</h3>
             <ul class="features">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
@@ -307,31 +324,14 @@
               </li>
             </ul>
           </div>
-          <div class="card-border">
-            <h3 style="margin-top:0">7️⃣ Kontakt pro zájemce</h3>
-            <p class="muted" style="margin-top:.75rem">Ing. Jiří Šmíd – jednatel</p>
-            <p style="margin:.25rem 0 0;font-weight:600"><a href="tel:+420606174951">+420&nbsp;606&nbsp;174&nbsp;951</a></p>
-            <div style="margin-top:1.25rem" class="highlight">
-              <p style="margin:0;font-weight:600">Napište nebo zavolejte a připravíme nabídku podle vašich potřeb.</p>
+          <div class="section-block">
+            <h3 style="margin-top:0">Kontakt pro zájemce</h3>
+            <p style="margin:.25rem 0 1rem;font-weight:600">Ing. Jiří Šmíd – jednatel</p>
+            <p class="muted" style="margin:0 0 1rem">Rádi připravíme individuální nabídku pronájmu a domluvíme osobní prohlídku areálu.</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
+              <a class="btn" href="tel:+420606174951">📱 +420 606 174 951</a>
+              <a class="btn btn-outline" href="mailto:info@sempra.cz?subject=Pron%C3%A1jem%20haly%20Vrbi%C4%8Dany">Napsat poptávku</a>
             </div>
-            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-              <a class="btn" href="tel:+420606174951">Zavolat</a>
-              <a class="btn btn-outline" href="#contact">Další kontakty</a>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:2.5rem">
-          <h3>Vizualizace nové haly</h3>
-          <div class="gallery" style="margin-top:1.5rem">
-            <figure>
-              <img src="/svareni.jpg" alt="Vizualizace interiéru nové haly ve Vrbičanech">
-              <figcaption class="muted">Interiér výrobně-skladovacích prostor s výškou až 5,5 m.</figcaption>
-            </figure>
-            <figure>
-              <img src="/zinkovna.jpg" alt="Vizualizace exteriéru nové haly ve Vrbičanech">
-              <figcaption class="muted">Exteriér haly s dvoukřídlými vraty a manipulačním prostorem.</figcaption>
-            </figure>
           </div>
         </div>
       </div>
