@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SEMPRA PRAHA a.s. — Tradice českého šlechtění, semenářství a průmyslu</title>
   <meta name="description" content="SEMPRA PRAHA a.s. – česká společnost pro šlechtění a semenářství, zahradnickou výrobu a strojírenský závod Děčín. Nabídka osiv řepky, lnu, kmínu a další." />
+  <meta property="og:title" content="SEMPRA PRAHA a.s. — Tradice českého šlechtění, semenářství a průmyslu" />
+  <meta property="og:description" content="SEMPRA PRAHA a.s. – česká společnost pro šlechtění a semenářství, zahradnickou výrobu a strojírenský závod Děčín. Nabídka osiv řepky, lnu, kmínu a další." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sempra.cz/" />
+  <meta property="og:image" content="https://www.sempra.cz/logo_SEMPRA_PNG.png" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="SEMPRA PRAHA a.s." />
+  <meta name="twitter:description" content="České šlechtění, semenářství a průmysl od roku 1957." />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -50,6 +59,20 @@
     footer{border-top:1px solid var(--border);background:#fff}
     .footer-grid{display:grid;gap:1.25rem}
     @media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+    /* Mobile menu */
+    .hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;background:none;border:0;padding:.5rem;cursor:pointer;width:40px;height:40px}
+    .hamburger span{display:block;height:2px;background:var(--brand-primary);border-radius:2px;transition:transform .25s,opacity .25s}
+    .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(min-width:768px){.hamburger{display:none}}
+    .mobile-nav{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:.75rem 1rem 1rem}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{padding:.6rem 0;border-bottom:1px solid var(--border);color:var(--text);font-weight:500}
+    .mobile-nav a:last-child{border-bottom:0}
+    @media(min-width:768px){.mobile-nav{display:none!important}}
+    /* Nav active link */
+    .navlinks a.active,.mobile-nav a.active{color:var(--brand-primary);font-weight:700}
     /* Back to top */
     .to-top{position:fixed;right:1rem;bottom:1rem;display:none}
     .to-top.show{display:inline-flex}
@@ -81,7 +104,19 @@
         <a href="#contact">Kontakty</a>
         <a class="btn btn-outline" href="mailto:info@sempra.cz?subject=Poptávka%20z%20webu">Napište nám</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobilní navigace">
+      <a href="#about">O nás</a>
+      <a href="#divisions">Divize</a>
+      <a href="#products">Produkty</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#news">Aktuality</a>
+      <a href="#contact">Kontakty</a>
+      <a href="mailto:info@sempra.cz?subject=Poptávka%20z%20webu">Napište nám</a>
+    </nav>
   </header>
 
   <!-- HERO -->
@@ -126,7 +161,7 @@
   <!-- DIVISIONS -->
   <section id="divisions" style="background:linear-gradient(#fff,var(--brand-tint))">
     <div class="container" style="padding:4rem 1rem">
-      <h2>Naše stranice</h2>
+      <h2>Naše stanice</h2>
       <p class="muted" style="margin-top:.5rem">Propojujeme vědu, praxi a průmysl. Kliknutím přejdete na detailní informace jednotlivých pracovišť a produktů.</p>
       <div class="grid cols-4" style="margin-top:1.25rem">
         <article class="card-border">
@@ -283,26 +318,26 @@
         <a class="card-border" href="kmin/index.html" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Kmín - Prochan</strong>
-            <img src="kmin.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="kmin.jpg" alt="Kmín kořenný – osivo Prochan" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>
 
         <a class="card-border" href="jarni_repka/index.html" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Řepka jarní – Lužnice</strong>
-            <img src="repka1.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="repka1.jpg" alt="Řepka jarní – odrůda Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>
         <a class="card-border" href="repka/index.html" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Řepka ozimá – Sázava</strong>
-            <img src="repka2.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="repka2.jpg" alt="Řepka ozimá – odrůda Sázava" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>
         <a class="card-border" href="len/index.html" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Len žlutosemenný - Jantar</strong>
-            <img src="semeno_lnu.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="semeno_lnu.jpg" alt="Len žlutosemenný – odrůda Jantar" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>        <a class="card-border" href="http://sempravlosinach.cz/" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
@@ -317,12 +352,12 @@
           </a>        <a class="card-border" href="http://sempravlosinach.cz/" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Maliník</strong>
-            <img src="maliny.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="maliny.jpg" alt="Maliník – sadba" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>        <a class="card-border" href="http://sempravlosinach.cz/" target="_blank" rel="noopener">
           <div style="background:var(--brand-tint);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.75rem;gap:.5rem">
             <strong style="color:var(--brand-primary);font-size:.95rem">Ostatní drobné ovoce</strong>
-            <img src="drobne.jpg" alt="Řepka jarní – Lužnice" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
+            <img src="drobne.jpg" alt="Ostatní drobné ovoce – sadba" style="width:100%;height:120px;object-fit:cover;border-radius:12px;filter:brightness(1.18)" />
           </div>
           </a>  
           
@@ -410,7 +445,7 @@
         </article>
         <article class="card-border">
           <div class="muted" style="font-size:.8rem">Červen 2025</div>
-          <h3 style="margin:.25rem 0">Pozvánka na valhou hromadu</h3>
+          <h3 style="margin:.25rem 0">Pozvánka na valnou hromadu</h3>
           <a href="Pozvanka_na_VH.pdf" target="_blank" rel="noopener">Valná hromada ↗</a>
         </article>
         <article class="card-border">
@@ -440,9 +475,18 @@
             <a class="btn" href="mailto:info@sempra.cz?subject=Popt%C3%A1vka%20z%20webu">Napsat e‑mail</a>
           </div>
         </div>
-        <div class="card-border">
-          <p class="muted" style="margin:.25rem 0 0 0"><strong>Kde nás najdete</strong><br>U topíren 2, 170 41 Praha 7</p>
-          <p class="muted" style="margin:.5rem 0 0 0;font-size:.85rem">Kliknutím na „Zobrazit na mapě“ se otevře Google Maps v nové kartě.</p>
+        <div class=”card-border” style=”padding:0;overflow:hidden”>
+          <iframe
+            title=”SEMPRA PRAHA a.s. – poloha na mapě”
+            src=”https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.3!2d14.4410!3d50.1005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94f7b5b0e3e5%3A0x0!2sU%20top%C3%ADren%202%2C%20170%2041%20Praha%207!5e0!3m2!1scs!2scz!4v1”
+            width=”100%”
+            height=”280”
+            style=”border:0;display:block”
+            allowfullscreen=””
+            loading=”lazy”
+            referrerpolicy=”no-referrer-when-downgrade”>
+          </iframe>
+          <p class=”muted” style=”margin:.5rem .75rem;font-size:.85rem”>U topíren 2, 170 41 Praha 7 – <a href=”https://maps.google.com/?q=U%20top%C3%ADren%202%2C%20Praha%207” target=”_blank” rel=”noopener”>otevřít v Google Maps ↗</a></p>
         </div>
       </div>
     </div>
@@ -528,6 +572,35 @@
       yearEl.textContent = y;
       var isFourDigits = y.length === 4 && !isNaN(Number(y));
       console.assert(isFourDigits, 'Footer year should be a 4-digit number');
+
+      // Hamburger menu
+      var hamburger = document.getElementById('hamburger');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function(){
+        var open = mobileNav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(open));
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          mobileNav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Aktivní sekce v navigaci
+      var sections = Array.from(document.querySelectorAll('section[id]'));
+      var navLinks = Array.from(document.querySelectorAll('.navlinks a[href^="#"], .mobile-nav a[href^="#"]'));
+      function updateActiveNav(){
+        var scrollY = window.scrollY + 100;
+        var current = sections.reduce(function(found, sec){
+          return sec.offsetTop <= scrollY ? sec : found;
+        }, sections[0]);
+        navLinks.forEach(function(a){
+          a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
+        });
+      }
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
 
       // Zpět nahoru tlačítko
       var toTop = document.getElementById('toTop');
