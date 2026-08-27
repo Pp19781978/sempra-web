@@ -185,7 +185,8 @@ a:hover .photo img { transform: scale(1.035); }
 .showcase-wide { grid-column: span 2; }
 
 .site-footer { padding: 3.2rem 0 1.5rem; color: #c8d5cd; background: #0b241b; }
-.footer-grid { display: grid; grid-template-columns: 1.35fr .8fr .9fr .8fr; gap: 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1.25fr .8fr 1.55fr; gap: 2rem; }
+.footer-contact-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
 .site-footer h3, .site-footer h4 { color: #fff; }
 .site-footer p { color: #aebfb5; }
 .site-footer a { color: #dce9e1; }
@@ -207,6 +208,7 @@ a:hover .photo img { transform: scale(1.035); }
   .showcase-main { grid-row: auto; grid-column: span 2; min-height: 420px; }
   .showcase-wide { grid-column: span 2; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-contact-group { grid-column: 1 / -1; }
 }
 @media (max-width: 650px) {
   .container { width: min(100% - 1.25rem, 1180px); }
@@ -220,6 +222,7 @@ a:hover .photo img { transform: scale(1.035); }
   .hero-photo.two { width: 58%; height: 42%; }
   .hero-seal { width: 105px; font-size: .6rem; }
   .grid.two, .grid.three, .grid.four, .footer-grid { grid-template-columns: 1fr; }
+  .footer-contact-group { grid-column: auto; grid-template-columns: 1fr; }
   .industry-contact { grid-template-columns: 1fr; }
   .industry-contact .button { grid-column: auto; width: 100%; }
   .section-head { align-items: start; flex-direction: column; }
